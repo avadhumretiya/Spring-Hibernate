@@ -23,12 +23,12 @@ public class DemoApplicationDI {
 
 		//Retrieve bean from own spring container
 		//Here we get bean
-		BaseInterfaceDI baseInterface= fileSystemXmlApplicationContext.getBean("myBean", BaseInterfaceDI.class);
-		BaseInterfaceDI baseInterface1=fileSystemXmlApplicationContext.getBean("myBean1", BaseInterfaceDI.class);
-
+		BaseInterfaceDI baseInterface= fileSystemXmlApplicationContext.getBean("myBeanDI", BaseInterfaceDI.class);
 		//Call methods on the bean
 		System.out.println(baseInterface.beanMethod());
-		System.out.println(baseInterface1.beanMethod());
+
+		//Call method to check constructor injection
+		System.out.println(baseInterface.testDIMethod());
 
 		//close the context
 		//for cleanup or garbage collection

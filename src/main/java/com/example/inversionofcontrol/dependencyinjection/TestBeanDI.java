@@ -9,7 +9,7 @@ public class TestBeanDI implements BaseInterfaceDI {
     //Create constructor for get dependency
     TestBeanDI(DIService diService1){
         //define object of DIService
-        this.diService=diService1;
+        diService=diService1;
     }
 
     //Implement interface method
