@@ -12,17 +12,17 @@
 
     <!--We need to change here only TestBeanIoC to TestBeanIoC1-->
     <!--Then bean class changed-->
-    <bean id="myBean" class="com.example.inversionofcontrol.ioc.TestBeanIoC"></bean>
+    <bean id="myBean" class="com.example.inversionofcontrol.spring.ioc.TestBeanIoC"></bean>
     <!--Or we can use another bean for different bean class-->
-    <bean id="myBean1" class="com.example.inversionofcontrol.ioc.TestBeanIoC1"></bean>
+    <bean id="myBean1" class="com.example.inversionofcontrol.spring.ioc.TestBeanIoC1"></bean>
 
     <!--Define the dependency-->
     <!--This is Internally work as following-->
     <!--DIService diService=new DIService();
         TestBeanDI testBeanDI=new TestBeanDI(diService);-->
-    <bean id="myService" class="com.example.inversionofcontrol.dependencyinjection.DIService"></bean>
+    <bean id="myService" class="com.example.inversionofcontrol.spring.dependencyinjection.DIService"></bean>
 
-    <bean id="myBeanDI" class="com.example.inversionofcontrol.dependencyinjection.TestBeanDI">
+    <bean id="myBeanDI" class="com.example.inversionofcontrol.spring.dependencyinjection.TestBeanDI">
         <!--Setup constructor injection-->
         <constructor-arg ref="myService"/>
     </bean>

@@ -13,7 +13,7 @@
     <!--We need to change here only TestBeanIoC to TestBeanIoC1-->
     <!--Then bean class changed-->
     <!--by default scope of bean is singleton-->
-    <bean id="myBean" class="com.example.inversionofcontrol.beanscope.TestBeanScope" scope="prototype"></bean>
-    <bean id="myBean1" class="com.example.inversionofcontrol.beanscope.TestBeanScope" scope="singleton"></bean>
+    <bean id="myBean" class="com.example.inversionofcontrol.spring.beanscope.TestBeanScope" scope="prototype"></bean>
+    <bean id="myBean1" class="com.example.inversionofcontrol.spring.beanscope.TestBeanScope" scope="singleton"></bean>
 
 </beans>
