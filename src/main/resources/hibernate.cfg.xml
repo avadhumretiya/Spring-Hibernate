@@ -2,7 +2,7 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
         "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
-    <session-factory name="hibernateSessionFactory">
+    <session-factory>
 
         <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
         <property name="hibernate.connection.password">new-strong-password</property>
@@ -13,8 +13,8 @@
         <property name="hibernate.show_sql">true</property>
         <property name="hibernate.format_sql">true</property>
 
-        <!--Create table in database automatic-->
-        <!--<property name="hbm2ddl.auto">create</property>-->
+        <!--Create database automatic only if not exists-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
 
         <property name="current_session_context_class">thread</property>
         <!--   <property name="hibernate.hbm2ddl.auto">create</property> -->
